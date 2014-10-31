@@ -13,15 +13,15 @@
 :let s = 0
 :let firestday = now-yes
 :while strftime("%d",firestday) > 1 
-	:let s += 1	
 	:let firestday = now-(yes*s)
+	:let s += 1
 :endwhile
 
 :let week = strftime("%a",firestday)
 
-:let list = ["“ú","Œ","‰Î","…","–Ø","‹à","“y"]
-echo strftime("                   @  %mŒ",now)
-echo ("    “ú    Œ    ‰Î    …    –Ø    ‹à    “y")
+:let list = ["æ—¥","æœˆ","ç«","æ°´","æœ¨","é‡‘","åœŸ"]
+echo strftime("                   ã€€  %mæœˆ",now)
+echo ("    æ—¥    æœˆ    ç«    æ°´    æœ¨    é‡‘    åœŸ")
 :let g = 1
 :while week != list[g]
 	:let g += 1
